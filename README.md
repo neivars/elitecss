@@ -1,6 +1,6 @@
 # elite.css
 
-A CSS file for buildings UIs that resemble the ingame Elite Dangerous iconic orange menus, in case you want to bring your web fancontent closer to the homely COVAS feel.
+A CSS file for building UIs that resemble the ingame Elite Dangerous iconic orange menus, in case you want to bring your web fancontent closer to the homely COVAS feel.
 
 🚀 Huge shoutout to [Elite Dangerous Assets](https://edassets.org/). They host a wealth of high-quality fanmade raster and vector graphics from the game's UI.
 
