@@ -1,0 +1,14 @@
+@use 'common';
+@use 'icons/universal-cart';
+
+.ed-icon {
+    @include common.box;
+
+    height: 100%;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+}
