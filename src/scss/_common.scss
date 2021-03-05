@@ -1,17 +1,14 @@
-@use 'dimensions';
 @use 'colors';
 
-/// Boxify an element so it behaves like a block element
+/// Boxify an element so it behaves like a block element.
 @mixin box {
     display: block;
     width: 100%;
     box-sizing: border-box;
 }
 
-/// Strip the text from its default decorations
+/// Strip the text from its default decorations.
 @mixin stripped-text {
-    font-size: 1.375rem;
     text-decoration: none;
-    text-align: left;
     line-height: 1;
 }

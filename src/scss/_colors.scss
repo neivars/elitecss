@@ -12,4 +12,5 @@ $highlight: #ff6e00;
 $highlight-faded: color.adjust($highlight, $alpha: -0.7);
 
 $disabled: #980000;
+$mediumdisabled: color.adjust($disabled, $blackness: 50%);
 $darkdisabled: #140703;
