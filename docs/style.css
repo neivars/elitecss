@@ -1,0 +1,72 @@
+body {
+    padding: 1rem;
+
+    width: 75%;
+    margin: auto;
+
+    background-color: #080604;
+
+    font-family: "Sintony";
+    color: #ff6e00;
+}
+
+h1,
+h2,
+h3 {
+    color: #ff9c51;
+    font-family: "Euro Caps";
+}
+
+ul {
+    list-style-type: symbols("+");
+}
+p {
+    margin: 0;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+a {
+    color: #ff9c51;
+}
+
+section {
+    display: grid;
+    row-gap: 1.5rem;
+    align-items: flex-start;
+    border-bottom: 2px solid #ff6e00;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 2rem;
+    align-items: flex-start;
+    margin: 1rem;
+}
+
+pre[class*="language-"] {
+    padding: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin: 0;
+    border-radius: 0;
+    background-color: transparent;
+    overflow: unset;
+}
+
+.title {
+    margin-top: 0;
+}
+
+.example {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 1rem;
+}
+
+.class-name {
+    display: inline-block;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    color: #e6db74;
+}

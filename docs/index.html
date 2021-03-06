@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Elite.CSS Documentation</title>
+
+        <link rel="stylesheet" href="css/elite.css" />
+        <link rel="stylesheet" href="prism.css" />
+        <link rel="stylesheet" href="style.css" />
+
+        <script defer src="prism.js"></script>
+    </head>
+    <body>
+        <h1 class="title">Elite.CSS Documentation</h1>
+        <p>
+            Elite.css uses a non-canonical naming scheme of the
+            <a href="http://getbem.com/introduction/">BEM</a> methodology, where
+            components are organised into blocks, elements and their respective
+            modifiers.
+        </p>
+
+        <p>
+            All classes defined by elite.css are namespaced under
+            <span class="class-name">ed-*</span>, so they don't conflict with
+            your native styles, like layout rules.
+        </p>
+
+        <h2>Components</h2>
+        <ul>
+            <li><a href="#comp-button">Button</a></li>
+        </ul>
+
+        <h3 id="comp-button">Button</h3>
+        <section>
+            <p>
+                The button component is a rectangular, clickable component that
+                can be composed of quite a few elements.
+            </p>
+            <article>
+                <div>
+                    <p>
+                        The simplest button is a block element defined with
+                        <span class="class-name">ed-button</span>, and two
+                        elements:
+                        <span class="class-name">ed-button__inner</span> and
+                        <span class="class-name">ed-button__main</span>.
+                    </p>
+                    <p>
+                        The inner element envelops the main corpus of the
+                        button, and the main element holds the most prominent
+                        content.
+                    </p>
+                </div>
+
+                <div class="example">
+                    <button class="ed-button">
+                        <div class="ed-button__inner">
+                            <div class="ed-button__main">Exit</div>
+                        </div>
+                    </button>
+
+                    <pre><code class="language-html">&lt;button class="ed-button"&gt;
+    &lt;div class="ed-button__inner"&gt;
+        &lt;div class="ed-button__main"&gt;Exit&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/button&gt;</code></pre>
+                </div>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        The most common kind of button in Elite Dangerous has an
+                        accompanying icon.
+                    </p>
+                    <p>
+                        Modify the button block with
+                        <span class="class-name">ed-button--has-head</span> and
+                        add the
+                        <span class="class-name">ed-button__head</span> element
+                        to give the button a head.
+                    </p>
+                    <p>
+                        Inside the head element, add your icon block and make
+                        sure to mix it with the
+                        <span class="class-name">ed-button__icon</span> element
+                        so it gets correctly handled by the block.
+                    </p>
+                </div>
+
+                <div class="example">
+                    <button class="ed-button ed-button--has-head">
+                        <div class="ed-button__head">
+                            <div
+                                class="ed-icon ed-button__icon ed-icon-universal-cartographics"
+                            ></div>
+                        </div>
+                        <div class="ed-button__inner">
+                            <div class="ed-button__main">
+                                Universal Cartographics
+                            </div>
+                        </div>
+                    </button>
+
+                    <pre><code class="language-html">&lt;button class="ed-button ed-button--has-head"&gt;
+    &lt;div class="ed-button__head"&gt;
+        &lt;div
+            class="ed-icon
+                   ed-button__icon
+                   ed-icon-universal-cartographics"
+        &gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="ed-button__inner"&gt;
+        &lt;div class="ed-button__main"&gt;
+            Universal Cartographics
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/button&gt;</code></pre>
+                </div>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        Add <span class="class-name">ed-button__sub</span> to
+                        allow secondary content within the button's body.
+                    </p>
+                </div>
+
+                <div class="example">
+                    <button class="ed-button ed-button--has-head">
+                        <div class="ed-button__head">
+                            <div
+                                class="ed-icon ed-button__icon ed-icon-commodity"
+                            ></div>
+                        </div>
+                        <div class="ed-button__inner">
+                            <div class="ed-button__main">
+                                Commodities Market
+                            </div>
+                            <div class="ed-button__sub">Agriculture</div>
+                        </div>
+                    </button>
+
+                    <pre><code class="language-html">&lt;button class="ed-button ed-button--has-head"&gt;
+    &lt;div class="ed-button__head"&gt;
+        &lt;div
+            class="ed-icon
+                   ed-button__icon
+                   ed-icon-commodity"
+        &gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="ed-button__inner"&gt;
+        &lt;div class="ed-button__main"&gt;
+            Commodities Market
+        &lt;/div&gt;
+        &lt;div class="ed-button__sub"&gt;Agriculture&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/button&gt;</code></pre>
+                </div>
+            </article>
+        </section>
+    </body>
+</html>
