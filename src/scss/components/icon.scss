@@ -1,8 +1,9 @@
 @use '../common';
 @use '../colors';
 
-@use '../icons/universal-cart';
 @use '../icons/commodity';
+@use '../icons/engineer';
+@use '../icons/universal-cart';
 
 .ed-icon {
     @include common.box;
