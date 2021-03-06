@@ -1,0 +1,12 @@
+@mixin mask($svg: string) {
+    -webkit-mask: url("data:image/svg+xml;utf8,#{$svg}");
+    mask: url("data:image/svg+xml;utf8,#{$svg}");
+}
+
+/// Fanmade icon by CMDR SpyTec
+/// https://www.reddit.com/user/spytec13
+.ed-icon-commodity {
+    @include mask(
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126.332 126.332"><g data-name="Layer 2"><path style="fill:none;stroke:black;stroke-linejoin:round;stroke-width:8px" d="M3 99.458V76.247L76.247 3v23.211l23.874 23.873h23.211v-23.21L99.458 3H76.247v23.211L3 99.458l23.874 23.874h23.21l73.248-73.248h-23.211l-73.247 73.248" data-name="Layer 1"/></g></svg>'
+    );
+}
