@@ -68,9 +68,9 @@ $sub-font-size: 0.875rem;
         height: $main-font-size;
 
         font-size: $main-font-size;
-        text-align: left;
         font-family: "Euro Caps";
         color: colors.$highlight;
+        text-align: left;
     }
 
     // The button's secondary content, placed underneath the main content.
@@ -82,10 +82,10 @@ $sub-font-size: 0.875rem;
         align-items: center;
 
         margin-top: $padding / 2;
+        font-size: $sub-font-size;
+        font-family: "Sintony";
         color: colors.$lowlight;
         text-align: left;
-        font-family: "Sintony";
-        font-size: $sub-font-size;
     }
 
     // The button's rightmost content inline with the main content. It can be
@@ -98,10 +98,10 @@ $sub-font-size: 0.875rem;
 
         height: 100%;
 
-        font-size: $numeric-font-size;
-        font-family: "Telegren";
-        text-align: right;
+        font-size: $main-font-size;
+        font-family: "Euro Caps";
         color: colors.$highlight;
+        text-align: right;
     }
 
     // Holds the button's accompanying visual decoration.

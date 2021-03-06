@@ -30,28 +30,12 @@ a {
     color: #ff9c51;
 }
 
-section {
-    display: grid;
-    row-gap: 1.5rem;
-    align-items: flex-start;
-    border-bottom: 2px solid #ff6e00;
-}
-
-article {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    column-gap: 2rem;
-    align-items: flex-start;
-    margin: 1rem;
-}
-
 pre[class*="language-"] {
     padding: 0;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
     margin: 0;
     border-radius: 0;
     background-color: transparent;
+    font-size: 0.85rem;
     overflow: unset;
 }
 
@@ -61,8 +45,27 @@ pre[class*="language-"] {
 
 .example {
     display: grid;
-    grid-auto-flow: row;
-    row-gap: 1rem;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    column-gap: 1.5rem;
+    align-items: flex-start;
+
+    position: relative;
+    padding: 0.5rem 0;
+    margin-bottom: 1.5rem;
+    border-top: 2px solid #ff6e00;
+    border-bottom: 2px solid #ff6e00;
+}
+
+.example::before {
+    content: "Example";
+    position: absolute;
+    top: -0.75rem;
+    right: 0;
+    padding: 0.125rem 0.5rem;
+    background-color: #ff6e00;
+    color: #080604;
+    font-size: 1rem;
 }
 
 .class-name {

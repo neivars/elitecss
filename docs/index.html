@@ -32,110 +32,50 @@
             <li><a href="#comp-button">Button</a></li>
         </ul>
 
-        <h3 id="comp-button">Button</h3>
-        <section>
-            <p>
-                The button component is a rectangular, clickable component that
-                can be composed of quite a few elements.
-            </p>
-            <article>
-                <div>
-                    <p>
-                        The simplest button is a block element defined with
-                        <span class="class-name">ed-button</span>, and two
-                        elements:
-                        <span class="class-name">ed-button__inner</span> and
-                        <span class="class-name">ed-button__main</span>.
-                    </p>
-                    <p>
-                        The inner element envelops the main corpus of the
-                        button, and the main element holds the most prominent
-                        content.
-                    </p>
-                </div>
+        <h2 id="comp-button">Button</h2>
+        <p>
+            The button component is a rectangular, clickable component that can
+            be composed of quite a few elements.
+        </p>
+        <p>
+            The simplest button is a block element defined with
+            <span class="class-name">ed-button</span>, and two elements:
+            <span class="class-name">ed-button__inner</span> and
+            <span class="class-name">ed-button__main</span>. The inner element
+            envelops the main corpus of the button, and the main element holds
+            the most prominent content.
+        </p>
+        <article class="example">
+            <div>
+                <button class="ed-button">
+                    <div class="ed-button__inner">
+                        <div class="ed-button__main">Exit</div>
+                    </div>
+                </button>
+            </div>
 
-                <div class="example">
-                    <button class="ed-button">
-                        <div class="ed-button__inner">
-                            <div class="ed-button__main">Exit</div>
-                        </div>
-                    </button>
-
-                    <pre><code class="language-html">&lt;button class="ed-button"&gt;
+            <pre><code class="language-html">&lt;button class="ed-button"&gt;
     &lt;div class="ed-button__inner"&gt;
         &lt;div class="ed-button__main"&gt;Exit&lt;/div&gt;
     &lt;/div&gt;
 &lt;/button&gt;</code></pre>
-                </div>
-            </article>
+        </article>
 
-            <article>
-                <div>
-                    <p>
-                        The most common kind of button in Elite Dangerous has an
-                        accompanying icon.
-                    </p>
-                    <p>
-                        Modify the button block with
-                        <span class="class-name">ed-button--has-head</span> and
-                        add the
-                        <span class="class-name">ed-button__head</span> element
-                        to give the button a head.
-                    </p>
-                    <p>
-                        Inside the head element, add your icon block and make
-                        sure to mix it with the
-                        <span class="class-name">ed-button__icon</span> element
-                        so it gets correctly handled by the block.
-                    </p>
-                </div>
+        <h3>Button Body</h3>
+        <p>
+            The body of the button can grow more complex, hosting more pieces of
+            secondary information.
+        </p>
+        <p>
+            Use the <span class="class-name">ed-button__sub</span> and
+            <span class="class-name">ed-button__side</span> elements to add
+            subcontent or side content to the button's body.
+        </p>
 
-                <div class="example">
-                    <button class="ed-button ed-button--has-head">
-                        <div class="ed-button__head">
-                            <div
-                                class="ed-icon ed-button__icon ed-icon-universal-cartographics"
-                            ></div>
-                        </div>
-                        <div class="ed-button__inner">
-                            <div class="ed-button__main">
-                                Universal Cartographics
-                            </div>
-                        </div>
-                    </button>
-
-                    <pre><code class="language-html">&lt;button class="ed-button ed-button--has-head"&gt;
-    &lt;div class="ed-button__head"&gt;
-        &lt;div
-            class="ed-icon
-                   ed-button__icon
-                   ed-icon-universal-cartographics"
-        &gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="ed-button__inner"&gt;
-        &lt;div class="ed-button__main"&gt;
-            Universal Cartographics
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/button&gt;</code></pre>
-                </div>
-            </article>
-
-            <article>
-                <div>
-                    <p>
-                        Add <span class="class-name">ed-button__sub</span> to
-                        allow secondary content within the button's body.
-                    </p>
-                </div>
-
-                <div class="example">
-                    <button class="ed-button ed-button--has-head">
-                        <div class="ed-button__head">
-                            <div
-                                class="ed-icon ed-button__icon ed-icon-commodity"
-                            ></div>
-                        </div>
+        <article class="example">
+            <div>
+                <div style="margin-bottom: 0.5rem">
+                    <button class="ed-button">
                         <div class="ed-button__inner">
                             <div class="ed-button__main">
                                 Commodities Market
@@ -143,24 +83,110 @@
                             <div class="ed-button__sub">Agriculture</div>
                         </div>
                     </button>
+                </div>
+                <div>
+                    <button class="ed-button">
+                        <div class="ed-button__inner">
+                            <div class="ed-button__main">Refuel</div>
+                            <div class="ed-button__sub">Main Reserves</div>
+                            <div class="ed-button__side">75%</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
 
-                    <pre><code class="language-html">&lt;button class="ed-button ed-button--has-head"&gt;
-    &lt;div class="ed-button__head"&gt;
-        &lt;div
-            class="ed-icon
-                   ed-button__icon
-                   ed-icon-commodity"
-        &gt;&lt;/div&gt;
-    &lt;/div&gt;
+            <div>
+                <pre><code class="language-html">&lt;button class="ed-button"&gt;
     &lt;div class="ed-button__inner"&gt;
-        &lt;div class="ed-button__main"&gt;
-            Commodities Market
-        &lt;/div&gt;
+        &lt;div class="ed-button__main"&gt;Commodities Market&lt;/div&gt;
         &lt;div class="ed-button__sub"&gt;Agriculture&lt;/div&gt;
     &lt;/div&gt;
 &lt;/button&gt;</code></pre>
-                </div>
-            </article>
-        </section>
+                <pre><code class="language-html">&lt;button class="ed-button"&gt;
+    &lt;div class="ed-button__inner"&gt;
+        &lt;div class="ed-button__main"&gt;Refuel&lt;/div&gt;
+        &lt;div class="ed-button__sub"&gt;Main Reserves&lt;/div&gt;
+        &lt;div class="ed-button__side"&gt;75%&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/button&gt;</code></pre>
+            </div>
+        </article>
+
+        <h3>Button Head</h3>
+        <p>
+            The most common kind of button in Elite Dangerous has an
+            accompanying icon.
+        </p>
+        <p>
+            Modify the button block with
+            <span class="class-name">ed-button--has-head</span> and add the
+            <span class="class-name">ed-button__head</span> element to give the
+            button a head.
+        </p>
+        <p>
+            Inside the head element, add your icon block and mix it with the
+            <span class="class-name">ed-button__icon</span> element so it gets
+            correctly handled by the block.
+        </p>
+
+        <article class="example">
+            <div>
+                <button class="ed-button ed-button--has-head">
+                    <div class="ed-button__head">
+                        <div
+                            class="ed-icon ed-button__icon ed-icon-commodity"
+                        ></div>
+                    </div>
+                    <div class="ed-button__inner">
+                        <div class="ed-button__main">Commodities Market</div>
+                        <div class="ed-button__sub">Agriculture</div>
+                    </div>
+                </button>
+            </div>
+
+            <pre><code class="language-html">&lt;button class="ed-button ed-button--has-head"&gt;
+    &lt;div class="ed-button__head"&gt;
+        &lt;div class="ed-icon ed-icon-commodity ed-button__icon"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="ed-button__inner"&gt;
+        &lt;div class="ed-button__main"&gt;Commodities Market&lt;/div&gt;
+        &lt;div class="ed-button__sub"&gt;Agriculture&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/button&gt;</code></pre>
+        </article>
+
+        <h3>Disabled Button</h3>
+        <p>
+            A button can be shown as disabled by adding the
+            <span class="class-name">ed-block--is-disabled</span> modifier to
+            the block.
+        </p>
+        <article class="example">
+            <div>
+                <button
+                    class="ed-button ed-button--has-head ed-button--is-disabled"
+                >
+                    <div class="ed-button__head">
+                        <div
+                            class="ed-icon ed-button__icon ed-icon-engineer"
+                        ></div>
+                    </div>
+                    <div class="ed-button__inner">
+                        <div class="ed-button__main">Remote Workshop</div>
+                        <div class="ed-button__sub">No Pinned Blueprints</div>
+                    </div>
+                </button>
+            </div>
+
+            <pre><code class="language-html">&lt;button class="ed-button ed-button--has-head ed-button--is-disabled"&gt;
+    &lt;div class="ed-button__head"&gt;
+        &lt;div class="ed-icon ed-icon-commodity ed-button__icon"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="ed-button__inner"&gt;
+        &lt;div class="ed-button__main"&gt;Remote Workshop&lt;/div&gt;
+        &lt;div class="ed-button__sub"&gt;No Pinned Blueprints&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/button&gt;</code></pre>
+        </article>
     </body>
 </html>
