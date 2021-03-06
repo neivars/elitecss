@@ -2,6 +2,8 @@
 
 A CSS file for building UIs that resemble the ingame Elite Dangerous iconic orange menus, in case you want to bring your web fancontent closer to the homely COVAS feel.
 
+[Documentation](http://neiva.rs/elitecss/) (WIP)
+
 🚀 Huge shoutout to [Elite Dangerous Assets](https://edassets.org/). They host a wealth of high-quality fanmade raster and vector graphics from the game's UI.
 
 ## Work in Progress
@@ -27,10 +29,6 @@ $ sass src/scss/elite.scss dist/css/elite.css
 ```
 
 `elite.scss` is the entry point of all other SASS partials and pieces.
-
-## Documentation
-
-**Blocked by Anonymity Protocols**
 
 ## License
 
