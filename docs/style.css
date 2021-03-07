@@ -1,8 +1,11 @@
 body {
-    padding: 1rem;
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 4fr;
+    column-gap: 2rem;
+    grid-auto-flow: column;
 
-    width: 75%;
-    margin: auto;
+    position: relative;
+    margin: 1rem;
 
     background-color: #080604;
 
@@ -13,30 +16,44 @@ body {
 h1,
 h2,
 h3 {
-    color: #ff9c51;
     font-family: "Euro Caps";
+    color: #eeeeee;
 }
 
 ul {
-    list-style-type: symbols("+");
+    list-style-type: "+ ";
+    padding: 0 1rem;
+    margin: 0;
 }
+
+li {
+    margin-bottom: 0.25rem;
+}
+
 p {
     margin: 0;
     margin-bottom: 1rem;
+
     line-height: 1.5;
 }
 
 a {
-    color: #ff9c51;
+    color: #eeeeee;
 }
 
 pre[class*="language-"] {
     padding: 0;
     margin: 0;
     border-radius: 0;
+
     background-color: transparent;
+
     font-size: 0.85rem;
     overflow: unset;
+}
+
+section {
+    margin-bottom: 2.5rem;
 }
 
 .title {
@@ -52,9 +69,10 @@ pre[class*="language-"] {
 
     position: relative;
     padding: 0.5rem 0;
-    margin-bottom: 1.5rem;
     border-top: 2px solid #ff6e00;
     border-bottom: 2px solid #ff6e00;
+
+    background: linear-gradient(to left, transparent, #ffffff05, transparent);
 }
 
 .example::before {
@@ -63,13 +81,31 @@ pre[class*="language-"] {
     top: -0.75rem;
     right: 0;
     padding: 0.125rem 0.5rem;
+
     background-color: #ff6e00;
+
     color: #080604;
-    font-size: 1rem;
+    font-size: 0.875rem;
 }
 
 .class-name {
     display: inline-block;
+
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
     color: #e6db74;
+}
+
+.attr-name {
+    display: inline-block;
+
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    color: #a6e22e;
+}
+
+.list-header {
+    margin: 1rem 0;
+
+    font-family: "Euro Caps";
+    font-size: 1.5rem;
+    line-height: 1;
 }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Button Component - Elite.css Docs</title>
+
+        <link rel="stylesheet" href="../css/elite.css" />
+        <link rel="stylesheet" href="../prism.css" />
+        <link rel="stylesheet" href="../style.css" />
+
+        <script defer src="../prism.js"></script>
+    </head>
+    <body>
+        <nav>
+            <p class="list-header">Elements</p>
+            <ul>
+                <li><a href="#progress">Progress</a></li>
+            </ul>
+
+            <p class="list-header">Modifiers</p>
+            <ul>
+                <li><a href="#disabled-progress">Disabled Progress</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section>
+                <h1 class="title" id="progress">Progress</h1>
+                <p>
+                    The progress block quantatively shows progression towards a
+                    state of completion. A progress bar is defined with the
+                    block
+                    <span class="class-name">ed-progress</span>.
+                </p>
+                <p>
+                    Set the usual progress attributes
+                    <span class="attr-name">value</span> and
+                    <span class="attr-name">max</span> to define the fill of the
+                    bar.
+                </p>
+
+                <div class="example">
+                    <div>
+                        <progress
+                            class="ed-progress"
+                            value="75"
+                            max="100"
+                        ></progress>
+                    </div>
+
+                    <pre><code class="language-html">&lt;progress
+    class="ed-progress"
+    value="75"
+    max="100"
+&gt;&lt;/progress&gt;</code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h2 id="disabled-progress">Disabled Progress</h2>
+                <p>
+                    Use the
+                    <span class="class-name">ed-progress--is-disabled</span>
+                    modifier on the progress block to show a disabled bar.
+                </p>
+
+                <div class="example">
+                    <div>
+                        <progress
+                            class="ed-progress ed-progress--is-disabled"
+                            value="33"
+                            max="100"
+                        ></progress>
+                    </div>
+
+                    <pre><code class="language-html">&lt;progress
+    class="ed-progress ed-progress--is-disabled"
+    value="33"
+    max="100"
+&gt;&lt;/progress&gt;</code></pre>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
