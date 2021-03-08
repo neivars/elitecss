@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Button Component - Elite.css Docs</title>
+
+        <link rel="stylesheet" href="../css/elite.css" />
+        <link rel="stylesheet" href="../prism.css" />
+        <link rel="stylesheet" href="../style.css" />
+
+        <script defer src="../prism.js"></script>
+    </head>
+    <body>
+        <nav>
+            <p class="list-header">Elements</p>
+            <ul>
+                <li><a href="#icon">Icon</a></li>
+            </ul>
+
+            <p class="list-header">Modifiers</p>
+            <ul>
+                <li><a href="#disabled-icon">Disabled Icon</a></li>
+            </ul>
+
+            <p class="list-header">Icon Listing</p>
+            <ul>
+                <li><a href="#--icommodity">Commodity</a></li>
+                <li><a href="#--iengineer">Engineer</a></li>
+                <li><a href="#--irefuel-all">Refuel All</a></li>
+                <li>
+                    <a href="#--iuniversal-cart">Universal Cartographics</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <section>
+                <h1 class="title" id="icon">Icon</h1>
+                <p>
+                    The icon block allows the use of embedded CSS SVG icons
+                    lovingly rendered by the community, with
+                    <span class="class-name">ed-icon</span>.
+                </p>
+                <p>
+                    The block itself has no dimensions - it will grow to be
+                    contained by whatever dimensions the enclosing parent
+                    element affords it. If the dimensions of the enclosing
+                    parent aren't square, the icon will offset itself to be
+                    centered on whatever the largest axis is.
+                </p>
+                <p>
+                    Using the embedded SVG icons is done through the use of
+                    modifiers. Check the
+                    <a href="#icon-listing">Icon Listing</a> for a list of all
+                    possible icons.
+                </p>
+                <div class="example">
+                    <div>
+                        <div style="height: 50px; width: 50px">
+                            <div class="ed-icon ed-icon--icommodity"></div>
+                        </div>
+                        <div style="height: 150px; width: 75px">
+                            <div class="ed-icon ed-icon--icommodity"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <pre><code class="language-html">&lt;div style="height: 50px; width: 50px"&gt;
+    &lt;div class="ed-icon ed-icon--icommodity"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        <pre><code class="language-html">&lt;div style="height: 150px; width: 75px"&gt;
+    &lt;div class="ed-icon ed-icon--icommodity"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 id="disabled-icon">Disabled Icon</h2>
+                <p>
+                    An icon can be shown to have a disabled look by adding the
+                    <span class="class-name">ed-icon--is-disabled</span>
+                    modifier to the icon block.
+                </p>
+                <div class="example">
+                    <div style="height: 50px; width: 50px">
+                        <div
+                            class="ed-icon ed-icon--is-disabled ed-icon--icommodity"
+                        ></div>
+                    </div>
+                    <div>
+                        <pre><code class="language-html">&lt;div style="height: 50px; width: 50px"&gt;
+    &lt;div
+        class="ed-icon ed-icon--is-disabled ed-icon--icommodity"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 id="icon-listing">Icon Listing</h2>
+                <p>
+                    The following list of modifiers allow the use of embeded SVG
+                    icons.
+                </p>
+                <div class="icon-grid">
+                    <div class="icon-item">
+                        <div class="ed-icon ed-icon--icommodity"></div>
+                        <p class="class-name">ed-icon--icommodity</p>
+                    </div>
+                    <div class="icon-item">
+                        <div class="ed-icon ed-icon--iengineer"></div>
+                        <p class="class-name">ed-icon--iengineer</p>
+                    </div>
+                    <div class="icon-item">
+                        <div class="ed-icon ed-icon--irefuel-all"></div>
+                        <p class="class-name">ed-icon--irefuel-all</p>
+                    </div>
+                    <div class="icon-item">
+                        <div
+                            class="ed-icon ed-icon--iuniversal-cartographics"
+                        ></div>
+                        <p class="class-name">
+                            ed-icon--iuniversal-cartographics
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
