@@ -16,7 +16,7 @@ Some good CSS-framework level documentation will also emerge, hopefully.
 
 ### CSS Release
 
-Grab the latest `elite.css` file release and link it in your HTML. The classes are now available to you, namespaced under `ed-*`.
+Grab the latest `elite.css` or `elite.min.css` file release and link it in your HTML. The classes are now available to you, namespaced under `ed-*`.
 
 ### Build from SASS
 
@@ -26,6 +26,12 @@ After installing SASS, clone the repo and output the `elite.css` with
 
 ```bash
 $ sass src/scss/elite.scss dist/css/elite.css
+```
+
+For the minified version, use the `--style` flag with `compressed`.
+
+```bash
+$ sass src/scss/elite.scss dist/css/elite.min.css --style compressed
 ```
 
 `elite.scss` is the entry point of all other SASS partials and pieces.
