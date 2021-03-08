@@ -1,9 +1,10 @@
 @use '../common';
 @use '../colors';
 
-@use '../icons/commodity';
-@use '../icons/engineer';
-@use '../icons/universal-cart';
+@mixin mask($svg: string) {
+    -webkit-mask-image: url("data:image/svg+xml;utf8,#{$svg}");
+    mask-image: url("data:image/svg+xml;utf8,#{$svg}");
+}
 
 .ed-icon {
     @include common.box;
