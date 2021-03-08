@@ -25,6 +25,13 @@
             <ul>
                 <li><a href="#disabled-button">Disabled Button</a></li>
             </ul>
+
+            <p class="list-header">Combinations</p>
+            <ul>
+                <li>
+                    <a href="#button-with-progress">Button With Progress</a>
+                </li>
+            </ul>
         </nav>
 
         <main>
@@ -201,6 +208,101 @@
         &lt;div class="ed-button__sub"&gt;No Pinned Blueprints&lt;/div&gt;
     &lt;/div&gt;
 &lt;/button&gt;</code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h2 id="button-with-progress">Button with Progress</h2>
+                <p>
+                    A button can host a
+                    <a href="progress.html">progress</a> block mixed with the
+                    <span class="class-name">ed-button__progress</span> element
+                    to make sure it behaves for the button's different states.
+                </p>
+                <div class="example">
+                    <div>
+                        <div style="margin-bottom: 0.5rem">
+                            <button class="ed-button ed-button--has-head">
+                                <div class="ed-button__head">
+                                    <div
+                                        class="ed-icon ed-button__icon ed-icon-refuel-all"
+                                    ></div>
+                                </div>
+                                <div class="ed-button__inner">
+                                    <div class="ed-button__main">
+                                        Refuel All
+                                    </div>
+                                    <div class="ed-button__sub">
+                                        <progress
+                                            class="ed-progress ed-button__progress"
+                                            value="60"
+                                            max="100"
+                                        ></progress>
+                                    </div>
+                                    <div class="ed-button__side">60%</div>
+                                </div>
+                            </button>
+                        </div>
+                        <div>
+                            <button
+                                class="ed-button ed-button--has-head ed-button--is-disabled"
+                            >
+                                <div class="ed-button__head">
+                                    <div
+                                        class="ed-icon ed-button__icon ed-icon-refuel-all"
+                                    ></div>
+                                </div>
+                                <div class="ed-button__inner">
+                                    <div class="ed-button__main">
+                                        Refuel All
+                                    </div>
+                                    <div class="ed-button__sub">
+                                        <progress
+                                            class="ed-progress ed-button__progress"
+                                            value="100"
+                                            max="100"
+                                        ></progress>
+                                    </div>
+                                    <div class="ed-button__side">100%</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <pre><code class="language-html">&lt;button class="ed-button ed-button--has-head"&gt;
+    &lt;div class="ed-button__head"&gt;
+        &lt;div class="ed-icon ed-icon-commodity ed-button__icon"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="ed-button__inner"&gt;
+        &lt;div class="ed-button__main"&gt;Refuel All&lt;/div&gt;
+        &lt;div class="ed-button__sub"&gt;
+            &lt;progress
+                class="ed-progress ed-button__progress"
+                value="60"
+                max="100"
+            &gt;&lt;/progress&gt;
+        &lt;/div&gt;
+        &lt;div class="ed-button__side"&gt;100%&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/button&gt;</code></pre>
+                        <pre><code class="language-html">&lt;button class="ed-button ed-button--has-head ed-button--is-disabled"&gt;
+    &lt;div class="ed-button__head"&gt;
+        &lt;div class="ed-icon ed-icon-commodity ed-button__icon"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="ed-button__inner"&gt;
+        &lt;div class="ed-button__main"&gt;Refuel All&lt;/div&gt;
+        &lt;div class="ed-button__sub"&gt;
+            &lt;progress
+                class="ed-progress ed-button__progress"
+                value="100"
+                max="100"
+            &gt;&lt;/progress&gt;
+        &lt;/div&gt;
+        &lt;div class="ed-button__side"&gt;100%&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/button&gt;</code></pre>
+                    </div>
                 </div>
             </section>
         </main>
