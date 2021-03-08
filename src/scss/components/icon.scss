@@ -9,6 +9,7 @@
 .ed-icon {
     @include common.box;
 
+    display: inline-block;
     height: 100%;
     mask-position: center;
     mask-repeat: no-repeat;
