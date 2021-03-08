@@ -112,7 +112,7 @@ $sub-font-size: 1rem;
         display: flex;
         align-items: center;
 
-        padding: 0 ($height - $image-size) / 2;
+        padding: ($height - $image-size) / 2;
         height: $height;
         color: colors.$highlight;
         background-color: colors.$darkback;
