@@ -239,7 +239,7 @@
                                             max="100"
                                         ></progress>
                                     </div>
-                                    <div class="ed-button__side">60%</div>
+                                    <div class="ed-button__side">580 CR</div>
                                 </div>
                             </button>
                         </div>
@@ -283,7 +283,7 @@
                 max="100"
             &gt;&lt;/progress&gt;
         &lt;/div&gt;
-        &lt;div class="ed-button__side"&gt;100%&lt;/div&gt;
+        &lt;div class="ed-button__side"&gt;580 CR&lt;/div&gt;
     &lt;/div&gt;
 &lt;/button&gt;</code></pre>
                         <pre><code class="language-html">&lt;button class="ed-button ed-button--has-head ed-button--is-disabled"&gt;
@@ -300,6 +300,119 @@
             &gt;&lt;/progress&gt;
         &lt;/div&gt;
         &lt;div class="ed-button__side"&gt;100%&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/button&gt;</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 id="big-button">Stacked Button</h2>
+                <p>
+                    A button can be stacked with the head on top of its body by
+                    using the
+                    <span class="class-name">ed-button--is-stacked</span>
+                    modifier with the button block.
+                </p>
+
+                <div class="example">
+                    <div>
+                        <div style="display: flex; flex-wrap: wrap">
+                            <div
+                                style="
+                                    width: 200px;
+                                    margin-right: 0.5rem;
+                                    margin-bottom: 0.5rem;
+                                "
+                            >
+                                <button
+                                    class="ed-button ed-button--has-head ed-button--is-stacked"
+                                >
+                                    <div class="ed-button__head">
+                                        <div
+                                            class="ed-icon ed-button__icon ed-icon--ilivery"
+                                        ></div>
+                                    </div>
+                                    <div class="ed-button__inner">
+                                        <div class="ed-button__main">
+                                            Livery
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                            <div
+                                style="
+                                    width: 200px;
+                                    margin-right: 0.5rem;
+                                    margin-bottom: 0.5rem;
+                                "
+                            >
+                                <button
+                                    class="ed-button ed-button--has-head ed-button--is-stacked"
+                                >
+                                    <div class="ed-button__head">
+                                        <div
+                                            class="ed-icon ed-button__icon ed-icon--iholo-me"
+                                        ></div>
+                                    </div>
+                                    <div class="ed-button__inner">
+                                        <div class="ed-button__main">
+                                            Holo-Me
+                                        </div>
+                                        <div class="ed-button__sub">
+                                            Holo-Me
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                            <div style="width: 200px">
+                                <button
+                                    class="ed-button ed-button--has-head ed-button--is-stacked ed-button--is-disabled"
+                                >
+                                    <div class="ed-button__head">
+                                        <div
+                                            class="ed-icon ed-button__icon ed-icon--iarx-shop"
+                                        ></div>
+                                    </div>
+                                    <div class="ed-button__inner">
+                                        <div class="ed-button__main">
+                                            Arx Shop
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <pre><code class="language-html">&lt;button class="ed-button ed-button--has-head ed-button--is-stacked"&gt;
+    &lt;div class="ed-button__head"&gt;
+        &lt;div
+            class="ed-icon ed-button__icon ed-icon--ilivery"
+        &gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="ed-button__inner"&gt;
+        &lt;div class="ed-button__main"&gt;Livery&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/button&gt;</code></pre>
+                        <pre><code class="language-html">&lt;button class="ed-button ed-button--has-head ed-button--is-stacked"&gt;
+    &lt;div class="ed-button__head"&gt;
+        &lt;div
+            class="ed-icon ed-button__icon ed-icon--iholo-me"
+        &gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="ed-button__inner"&gt;
+        &lt;div class="ed-button__main"&gt;Holo-Me&lt;/div&gt;
+        &lt;div class="ed-button__sub"&gt;Holo-Me&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/button&gt;</code></pre>
+                        <pre><code class="language-html">&lt;button class="ed-button ed-button--has-head ed-button--is-stacked ed-button--is-disabled"&gt;
+    &lt;div class="ed-button__head"&gt;
+        &lt;div
+            class="ed-icon ed-button__icon ed-icon--iarx-shop"
+        &gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="ed-button__inner"&gt;
+        &lt;div class="ed-button__main"&gt;Arx Shop&lt;/div&gt;
     &lt;/div&gt;
 &lt;/button&gt;</code></pre>
                     </div>
