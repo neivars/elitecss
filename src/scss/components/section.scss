@@ -1,0 +1,25 @@
+/// SECTION
+/// A semantic sectioned area of content.
+
+@use '../common';
+@use '../colors';
+
+.ed-section {
+    @include common.box;
+
+    padding: 0.75rem 1rem;
+
+    // ELEMENTS
+    // The header title of the section
+    &__heading {
+        @include common.box;
+        @include common.stripped-text;
+
+        margin: 0;
+        margin-bottom: 0.25rem;
+
+        font-family: "Euro Caps";
+        font-size: 1.375rem;
+        color: colors.$lowlight;
+    }
+}

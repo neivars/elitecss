@@ -1,0 +1,87 @@
+/// SECTION LIST
+/// A vertial grouping of section items, allowing each to be bordered by
+///  horizontal rules.
+
+@use '../common';
+@use '../colors';
+@use 'sass:color';
+
+.ed-section-list {
+    @include common.box;
+
+    $block: &;
+
+    // ELEMENTS
+    // A section list item
+    &__item {
+        @include common.box;
+
+        border-bottom: 0.125rem solid colors.$lowlight;
+
+        &:first-of-type {
+            border-top: 0.125rem solid colors.$lowlight;
+        }
+    }
+
+    // MODIFIERS
+    // A main section list has added flair to make it pop out as a main section
+    // of the UI
+    &--is-main {
+        border-top: 0.125rem solid colors.$lowlight;
+        border-bottom: 0.125rem solid colors.$lowlight;
+        background-color: colors.$sectionlist;
+
+        $mod: &;
+
+        #{$block}__item:first-of-type {
+            border-top: 0;
+        }
+
+        #{$block}__item:last-of-type {
+            border-bottom: 0;
+        }
+
+        &:hover {
+            position: relative;
+
+            border-top-color: colors.$highlight;
+            border-bottom-color: colors.$highlight;
+            background-image: radial-gradient(
+                    ellipse 110% 75% at 50% -10%,
+                    colors.$lowlight,
+                    30%,
+                    transparent
+                ),
+                radial-gradient(
+                    ellipse 110% 75% at 50% 110%,
+                    colors.$lowlight,
+                    30%,
+                    transparent
+                );
+        }
+
+        &:hover::before {
+            display: block;
+            position: absolute;
+            top: -0.125rem;
+
+            content: " ";
+            height: 0.125rem;
+            width: 100%;
+            box-shadow: 0 0 0.5rem 0.125rem
+                color.adjust($color: colors.$highlight, $alpha: -0.4);
+        }
+
+        &:hover::after {
+            display: block;
+            position: absolute;
+            bottom: -0.125rem;
+
+            content: " ";
+            height: 0.125rem;
+            width: 100%;
+            box-shadow: 0 0 0.5rem 0.125rem
+                color.adjust($color: colors.$highlight, $alpha: -0.4);
+        }
+    }
+}
