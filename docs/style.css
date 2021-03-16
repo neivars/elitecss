@@ -13,31 +13,31 @@ body {
     color: #f07b05;
 }
 
-h1,
-h2,
-h3 {
+.doc-h1,
+.doc-h2,
+.doc-h3 {
     font-family: "Euro Caps";
     color: #eeeeee;
 }
 
-ul {
+.doc-ul {
     list-style-type: "+ ";
     padding: 0 1rem;
     margin: 0;
 }
 
-li {
+.doc-ul li {
     margin-bottom: 0.25rem;
 }
 
-p {
+.doc-p {
     margin: 0;
     margin-bottom: 1rem;
 
     line-height: 1.5;
 }
 
-a {
+.doc-a {
     color: #eeeeee;
 }
 
@@ -53,15 +53,15 @@ pre[class*="language-"] {
     overflow: unset;
 }
 
-section {
+.doc-section {
     margin-bottom: 2.5rem;
 }
 
-.title {
+.doc-title {
     margin-top: 0;
 }
 
-.example {
+.doc-example {
     display: grid;
     grid-auto-columns: 1fr;
     grid-auto-flow: column;
@@ -76,7 +76,7 @@ section {
     background: linear-gradient(to left, transparent, #ffffff05, transparent);
 }
 
-.example::before {
+.doc-example::before {
     content: "Example";
     position: absolute;
     top: -0.75rem;
@@ -89,21 +89,21 @@ section {
     font-size: 0.875rem;
 }
 
-.class-name {
+.doc-class-name {
     display: inline-block;
 
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
     color: #e6db74;
 }
 
-.attr-name {
+.doc-attr-name {
     display: inline-block;
 
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
     color: #a6e22e;
 }
 
-.list-header {
+.doc-list-header {
     margin: 1rem 0;
 
     font-family: "Euro Caps";
@@ -111,7 +111,7 @@ section {
     line-height: 1;
 }
 
-.icon-grid {
+.doc-icon-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 0.5rem;
@@ -119,14 +119,14 @@ section {
     align-items: flex-start;
 }
 
-.icon-item {
+.doc-icon-item {
     text-align: center;
 }
 
-.icon-item .ed-icon {
+.doc-icon-item .ed-icon {
     height: 50px;
 }
 
-.icon-item p {
+.doc-icon-item p {
     margin: 0;
 }

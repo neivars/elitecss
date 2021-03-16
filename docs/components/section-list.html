@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Section List Component - Elite.css Docs</title>
+
+        <link rel="stylesheet" href="../css/elite.min.css" />
+        <link rel="stylesheet" href="../prism.css" />
+        <link rel="stylesheet" href="../style.css" />
+
+        <script defer src="../prism.js"></script>
+    </head>
+    <body>
+        <nav>
+            <p class="doc-p doc-list-header">Elements</p>
+            <ul class="doc-ul">
+                <li><a class="doc-a" href="#section-list">Section List</a></li>
+            </ul>
+
+            <p class="doc-p doc-list-header">Modifiers</p>
+            <ul class="doc-ul">
+                <li>
+                    <a class="doc-a" href="#main-section-list"
+                        >Main Section List</a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="doc-section">
+                <h1 class="doc-h1 doc-title" id="section-list">Section List</h1>
+                <p class="doc-p">
+                    A section list block holds a list of section blocks.
+                </p>
+                <p class="doc-p">
+                    Use the
+                    <span class="doc-class-name">ed-section-list</span>
+                    block to define a section list, and nest
+                    <span class="doc-class-name">ed-section-list__item</span>s
+                    within for each section.
+                </p>
+
+                <div class="doc-example">
+                    <div>
+                        <div class="ed-section-list">
+                            <section class="ed-section ed-section-list__item">
+                                <h1 class="ed-section__heading">
+                                    Section Heading
+                                </h1>
+                                Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Nobis illum necessitatibus
+                                consectetur pariatur excepturi, eligendi officia
+                                dignissimos quod nostrum aut tempore
+                                voluptatibus rerum ipsa dolorum deserunt,
+                                dolorem officiis animi ipsam quas delectus
+                                alias, modi in?
+                            </section>
+                            <section class="ed-section ed-section-list__item">
+                                <h1 class="ed-section__heading">
+                                    Section Heading
+                                </h1>
+                                Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Nobis illum necessitatibus
+                                consectetur pariatur excepturi, eligendi officia
+                                dignissimos quod nostrum aut tempore
+                                voluptatibus rerum ipsa dolorum deserunt,
+                                dolorem officiis animi ipsam quas delectus
+                                alias, modi in?
+                            </section>
+                        </div>
+                    </div>
+                    <pre><code class="language-html">&lt;div class="ed-section-list"&gt;
+    &lt;section class="ed-section ed-section-list__item"&gt;
+        &lt;h1 class="ed-section__heading"&gt;
+            Section Heading
+        &lt;/h1&gt;
+        Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Nobis illum necessitatibus
+        consectetur pariatur excepturi, eligendi officia
+        dignissimos quod nostrum aut tempore
+        voluptatibus rerum ipsa dolorum deserunt,
+        dolorem officiis animi ipsam quas delectus
+        alias, modi in?
+    &lt;/section&gt;
+    &lt;section class="ed-section ed-section-list__item"&gt;
+        &lt;h1 class="ed-section__heading"&gt;
+            Section Heading
+        &lt;/h1&gt;
+        Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Nobis illum necessitatibus
+        consectetur pariatur excepturi, eligendi officia
+        dignissimos quod nostrum aut tempore
+        voluptatibus rerum ipsa dolorum deserunt,
+        dolorem officiis animi ipsam quas delectus
+        alias, modi in?
+    &lt;/section&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </section>
+
+            <section class="doc-section">
+                <h1 class="doc-h1 doc-title" id="main-section-list">
+                    Main Section List
+                </h1>
+                <p class="doc-p">
+                    A section list modified to have added flair to make it pop
+                    out as a main section of the UI.
+                </p>
+                <p class="doc-p">
+                    Use the
+                    <span class="doc-class-name">ed-section-list--is-main</span>
+                    modifier along with the section list block to make it pop
+                    out as a main section list.
+                </p>
+
+                <div class="doc-example">
+                    <div>
+                        <div class="ed-section-list ed-section-list--is-main">
+                            <section class="ed-section ed-section-list__item">
+                                <h1 class="ed-section__heading">
+                                    Section Heading
+                                </h1>
+                                Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Nobis illum necessitatibus
+                                consectetur pariatur excepturi, eligendi officia
+                                dignissimos quod nostrum aut tempore
+                                voluptatibus rerum ipsa dolorum deserunt,
+                                dolorem officiis animi ipsam quas delectus
+                                alias, modi in?
+                            </section>
+                            <section class="ed-section ed-section-list__item">
+                                <h1 class="ed-section__heading">
+                                    Section Heading
+                                </h1>
+                                Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Nobis illum necessitatibus
+                                consectetur pariatur excepturi, eligendi officia
+                                dignissimos quod nostrum aut tempore
+                                voluptatibus rerum ipsa dolorum deserunt,
+                                dolorem officiis animi ipsam quas delectus
+                                alias, modi in?
+                            </section>
+                        </div>
+                    </div>
+                    <pre><code class="language-html">&lt;div class="ed-section-list ed-section-list--is-main"&gt;
+    &lt;section class="ed-section ed-section-list__item"&gt;
+        &lt;h1 class="ed-section__heading"&gt;
+            Section Heading
+        &lt;/h1&gt;
+        Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Nobis illum necessitatibus
+        consectetur pariatur excepturi, eligendi officia
+        dignissimos quod nostrum aut tempore
+        voluptatibus rerum ipsa dolorum deserunt,
+        dolorem officiis animi ipsam quas delectus
+        alias, modi in?
+    &lt;/section&gt;
+    &lt;section class="ed-section ed-section-list__item"&gt;
+        &lt;h1 class="ed-section__heading"&gt;
+            Section Heading
+        &lt;/h1&gt;
+        Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Nobis illum necessitatibus
+        consectetur pariatur excepturi, eligendi officia
+        dignissimos quod nostrum aut tempore
+        voluptatibus rerum ipsa dolorum deserunt,
+        dolorem officiis animi ipsam quas delectus
+        alias, modi in?
+    &lt;/section&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

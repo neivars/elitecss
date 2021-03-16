@@ -14,42 +14,48 @@
     </head>
     <body>
         <nav>
-            <p class="list-header">Elements</p>
-            <ul>
-                <li><a href="#button">Button</a></li>
-                <li><a href="#button-body">Button Body</a></li>
-                <li><a href="#button-head">Button Head</a></li>
+            <p class="doc-p doc-list-header">Elements</p>
+            <ul class="doc-ul">
+                <li><a class="doc-a" href="#button">Button</a></li>
+                <li><a class="doc-a" href="#button-body">Button Body</a></li>
+                <li><a class="doc-a" href="#button-head">Button Head</a></li>
             </ul>
 
-            <p class="list-header">Modifiers</p>
-            <ul>
-                <li><a href="#disabled-button">Disabled Button</a></li>
-            </ul>
-
-            <p class="list-header">Combinations</p>
-            <ul>
+            <p class="doc-p doc-list-header">Modifiers</p>
+            <ul class="doc-ul">
                 <li>
-                    <a href="#button-with-progress">Button With Progress</a>
+                    <a class="doc-a" href="#disabled-button">Disabled Button</a>
+                </li>
+                <li><a class="doc-a" href="#big-button">Stacked Button</a></li>
+            </ul>
+
+            <p class="doc-p doc-list-header">Combinations</p>
+            <ul class="doc-ul">
+                <li>
+                    <a class="doc-a" href="#button-with-progress"
+                        >Button With Progress</a
+                    >
                 </li>
             </ul>
         </nav>
 
         <main>
-            <section>
-                <h1 class="title" id="button">Button</h1>
-                <p>
+            <section class="doc-section">
+                <h1 class="doc-h1 doc-title" id="button">Button</h1>
+                <p class="doc-p">
                     The button component is a rectangular, clickable component
                     that can be composed of quite a few elements.
                 </p>
-                <p>
+                <p class="doc-p">
                     The simplest button is a block element defined with
-                    <span class="class-name">ed-button</span>, and two elements:
-                    <span class="class-name">ed-button__inner</span> and
-                    <span class="class-name">ed-button__main</span>. The inner
-                    element envelops the main corpus of the button, and the main
-                    element holds the most prominent content.
+                    <span class="doc-class-name">ed-button</span>, and two
+                    elements:
+                    <span class="doc-class-name">ed-button__inner</span> and
+                    <span class="doc-class-name">ed-button__main</span>. The
+                    inner element envelops the main corpus of the button, and
+                    the main element holds the most prominent content.
                 </p>
-                <div class="example">
+                <div class="doc-example">
                     <div>
                         <button class="ed-button">
                             <div class="ed-button__inner">
@@ -66,19 +72,20 @@
                 </div>
             </section>
 
-            <section>
-                <h2 id="button-body">Button Body</h2>
-                <p>
+            <section class="doc-section">
+                <h2 class="doc-h2" id="button-body">Button Body</h2>
+                <p class="doc-p">
                     The body of the button can grow more complex, hosting more
                     pieces of secondary information.
                 </p>
-                <p>
-                    Use the <span class="class-name">ed-button__sub</span> and
-                    <span class="class-name">ed-button__side</span> elements to
-                    add subcontent or side content to the button's body.
+                <p class="doc-p">
+                    Use the
+                    <span class="doc-class-name">ed-button__sub</span> and
+                    <span class="doc-class-name">ed-button__side</span> elements
+                    to add subcontent or side content to the button's body.
                 </p>
 
-                <div class="example">
+                <div class="doc-example">
                     <div>
                         <div style="margin-bottom: 0.5rem">
                             <button class="ed-button">
@@ -123,26 +130,27 @@
                 </div>
             </section>
 
-            <section>
-                <h2 id="button-head">Button Head</h2>
-                <p>
+            <section class="doc-section">
+                <h2 class="doc-h2" id="button-head">Button Head</h2>
+                <p class="doc-p">
                     The most common kind of button in Elite Dangerous has an
                     accompanying icon.
                 </p>
-                <p>
+                <p class="doc-p">
                     Modify the button block with
-                    <span class="class-name">ed-button--has-head</span> and add
-                    the <span class="class-name">ed-button__head</span> element
+                    <span class="doc-class-name">ed-button--has-head</span> and
+                    add the
+                    <span class="doc-class-name">ed-button__head</span> element
                     to give the button a head.
                 </p>
-                <p>
+                <p class="doc-p">
                     Inside the head element, add your icon block and mix it with
                     the
-                    <span class="class-name">ed-button__icon</span> element so
-                    it gets correctly handled by the block.
+                    <span class="doc-class-name">ed-button__icon</span> element
+                    so it gets correctly handled by the block.
                 </p>
 
-                <div class="example">
+                <div class="doc-example">
                     <div>
                         <button class="ed-button ed-button--has-head">
                             <div class="ed-button__head">
@@ -171,14 +179,14 @@
                 </div>
             </section>
 
-            <section>
-                <h2 id="disabled-button">Disabled Button</h2>
-                <p>
+            <section class="doc-section">
+                <h2 class="doc-h2" id="disabled-button">Disabled Button</h2>
+                <p class="doc-p">
                     A button can be shown as disabled by adding the
-                    <span class="class-name">ed-block--is-disabled</span>
+                    <span class="doc-class-name">ed-block--is-disabled</span>
                     modifier to the button block.
                 </p>
-                <div class="example">
+                <div class="doc-example">
                     <div>
                         <button
                             class="ed-button ed-button--has-head ed-button--is-disabled"
@@ -211,15 +219,19 @@
                 </div>
             </section>
 
-            <section>
-                <h2 id="button-with-progress">Button with Progress</h2>
-                <p>
+            <section class="doc-section">
+                <h2 class="doc-h2" id="button-with-progress">
+                    Button with Progress
+                </h2>
+                <p class="doc-p">
                     A button can host a
-                    <a href="progress.html">progress</a> block mixed with the
-                    <span class="class-name">ed-button__progress</span> element
-                    to make sure it behaves for the button's different states.
+                    <a class="doc-a" href="progress.html">progress</a> block
+                    mixed with the
+                    <span class="doc-class-name">ed-button__progress</span>
+                    element to make sure it behaves for the button's different
+                    states.
                 </p>
-                <div class="example">
+                <div class="doc-example">
                     <div>
                         <div style="margin-bottom: 0.5rem">
                             <button class="ed-button ed-button--has-head">
@@ -306,16 +318,16 @@
                 </div>
             </section>
 
-            <section>
-                <h2 id="big-button">Stacked Button</h2>
-                <p>
+            <section class="doc-section">
+                <h2 class="doc-h2" id="big-button">Stacked Button</h2>
+                <p class="doc-p">
                     A button can be stacked with the head on top of its body by
                     using the
-                    <span class="class-name">ed-button--is-stacked</span>
+                    <span class="doc-class-name">ed-button--is-stacked</span>
                     modifier with the button block.
                 </p>
 
-                <div class="example">
+                <div class="doc-example">
                     <div>
                         <div style="display: flex; flex-wrap: wrap">
                             <div
