@@ -10,7 +10,7 @@ body {
     background-color: #080604;
 
     font-family: "Sintony";
-    color: #ff6e00;
+    color: #f07b05;
 }
 
 h1,
@@ -44,6 +44,7 @@ a {
 pre[class*="language-"] {
     padding: 0;
     margin: 0;
+    margin-bottom: 1rem;
     border-radius: 0;
 
     background-color: transparent;
@@ -69,8 +70,8 @@ section {
 
     position: relative;
     padding: 0.5rem 0;
-    border-top: 2px solid #ff6e00;
-    border-bottom: 2px solid #ff6e00;
+    border-top: 2px solid #f07b05;
+    border-bottom: 2px solid #f07b05;
 
     background: linear-gradient(to left, transparent, #ffffff05, transparent);
 }
@@ -82,7 +83,7 @@ section {
     right: 0;
     padding: 0.125rem 0.5rem;
 
-    background-color: #ff6e00;
+    background-color: #f07b05;
 
     color: #080604;
     font-size: 0.875rem;
