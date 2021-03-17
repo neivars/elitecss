@@ -1,0 +1,9 @@
+@use '../components/icon';
+
+/// Fanmade icon by Maximilian1271
+/// https://github.com/Maximilian1271
+.ed-icon--imissionboard {
+    @include icon.mask(
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 142 142"><circle style="fill:none;stroke:black;stroke-width:9px;" cx="71" cy="71" r="66.5"/><path style="opacity:0.5;fill:none;stroke:black;stroke-width:9px;" d="M23.895 118.355c0-10.02 21.09-18.144 47.105-18.144s47.105 8.123 47.105 18.144M118.105 24.068c0 10.022-21.09 18.145-47.105 18.145S23.895 34.09 23.895 24.068"/><ellipse style="opacity:0.5;fill:none;stroke:black;stroke-width:9px;" cx="71" cy="71" rx="33.27" ry="66.5"/><path style="opacity:0.5;fill:none;stroke:black;stroke-width:9px;" d="M4.5 71h133M71 4.5v133"/></svg>'
+    );
+}

@@ -1,9 +1,9 @@
 @use '../components/icon';
 
-/// Fanmade icon by Maximilian1271
-/// https://github.com/Maximilian1271
+/// Official icon by Frontier Developments
+/// https://www.elitedangerous.com
 .ed-icon--icommodity {
     @include icon.mask(
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126.332 126.332"><g data-name="Layer 2"><path style="fill:none;stroke:black;stroke-linejoin:round;stroke-width:8px" d="M3 99.458V76.247L76.247 3v23.211l23.874 23.873h23.211v-23.21L99.458 3H76.247v23.211L3 99.458l23.874 23.874h23.21l73.248-73.248h-23.211l-73.247 73.248" data-name="Layer 1"/></g></svg>'
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"><path d="m8.37 1.3 2.31.37 2.65 2.65.37 2.31-7.07 7.07-2.31-.37-2.65-2.65-.37-2.31L8.37 1.3M8.11.5.5 8.11 1 11l3 3 2.93.47 7.57-7.58L14 4l-3-3L8.11.5z"/><path d="m14.04 7.23-2.65-.42-3.15-3.15-.43-2.65 1.12.29.33 2.09 2.35 2.35 2.09.33.34 1.16z"/><path style="opacity:0.5;" transform="rotate(-45 5.118 7.31)" d="M.09 6.9h10.05v.83H.09z"/><path style="opacity:0.5;" transform="rotate(-45 7.728 9.919)" d="M2.7 9.51h10.05v.83H2.7z"/></svg>'
     );
 }
