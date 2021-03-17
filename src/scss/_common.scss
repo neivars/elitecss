@@ -1,5 +1,9 @@
 @use 'colors';
 
+$std-button-height: 3.2rem;
+$main-font-size: 1.375rem;
+$sub-font-size: 1rem;
+
 /// Boxify an element so it behaves like a block element.
 @mixin box {
     display: block;
@@ -10,5 +14,6 @@
 /// Strip the text from its default decorations.
 @mixin stripped-text {
     text-decoration: none;
+    font-style: normal;
     line-height: 1;
 }

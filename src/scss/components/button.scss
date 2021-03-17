@@ -11,24 +11,21 @@
 $padding: 0.375rem;
 $padding-no-img: 0.625rem;
 $image-size: 1.6875rem;
-$height: 3.2rem;
-
-$main-font-size: 1.375rem;
-$sub-font-size: 1rem;
 
 .ed-button {
     $block: &;
 
     @include common.box;
+    @include common.stripped-text;
 
     display: grid;
     grid-template-columns: $padding-no-img 1fr;
-    grid-template-rows: $height;
+    grid-template-rows: common.$std-button-height;
     grid-template-areas: "icon body";
     align-content: center;
     align-items: center;
 
-    height: $height;
+    height: common.$std-button-height;
     overflow: clip;
     border: 0;
     padding: 0;
@@ -45,7 +42,7 @@ $sub-font-size: 1rem;
         grid-area: body;
 
         display: grid;
-        grid-template-columns: 1fr minmax($main-font-size, auto);
+        grid-template-columns: 1fr minmax(common.$main-font-size, auto);
         grid-template-areas: "main side" "sub sub";
         column-gap: $padding;
         align-content: center;
@@ -64,9 +61,9 @@ $sub-font-size: 1rem;
         display: flex;
         align-items: center;
 
-        height: $main-font-size;
+        height: common.$main-font-size;
 
-        font-size: $main-font-size;
+        font-size: common.$main-font-size;
         font-family: "Euro Caps";
         color: colors.$highlight;
         text-align: left;
@@ -80,7 +77,7 @@ $sub-font-size: 1rem;
         display: flex;
         align-items: center;
 
-        font-size: $sub-font-size;
+        font-size: common.$sub-font-size;
         font-family: "Sintony";
         color: colors.$lowlight;
         text-align: left;
@@ -96,7 +93,7 @@ $sub-font-size: 1rem;
 
         height: 100%;
 
-        font-size: $main-font-size;
+        font-size: common.$main-font-size;
         font-family: "Euro Caps";
         color: colors.$highlight;
         text-align: right;
@@ -111,8 +108,8 @@ $sub-font-size: 1rem;
         display: flex;
         align-items: center;
 
-        padding: ($height - $image-size) / 2;
-        height: $height;
+        padding: (common.$std-button-height - $image-size) / 2;
+        height: common.$std-button-height;
         color: colors.$highlight;
         background-color: colors.$darkback;
     }
@@ -123,7 +120,7 @@ $sub-font-size: 1rem;
 
     // Mix element to style a progress in the content.
     &__progress {
-        margin: $sub-font-size - 0.5rem 0;
+        margin: common.$sub-font-size - 0.5rem 0;
     }
 
     // STATES
@@ -188,7 +185,7 @@ $sub-font-size: 1rem;
     // MODIFIERS
     // Modifies the button so it can support a square-sized decoration head.
     &--has-head {
-        grid-template-columns: $height 1fr;
+        grid-template-columns: common.$std-button-height 1fr;
 
         &:hover,
         &:active {
