@@ -1,0 +1,118 @@
+/// CHECKBOX
+/// A checkbox is an element that can be toggled between on or off.
+@use '../colors';
+@use '../common';
+
+$height: common.$std-button-height - 0.8rem;
+
+.ed-togglebox {
+    $block: &;
+
+    @include common.box;
+
+    display: grid;
+    grid-template-columns: common.$std-button-height 1fr;
+    grid-template-rows: $height;
+    grid-template-areas: "check label";
+    align-content: center;
+    align-items: center;
+
+    height: $height;
+    overflow: clip;
+    border: 0;
+    padding: 0;
+
+    background-color: colors.$lightback;
+
+    cursor: pointer;
+
+    // ELEMENTS
+    // Checkbox selection box
+    &__check {
+        @include common.box;
+
+        position: relative;
+
+        grid-area: check;
+        justify-self: center;
+
+        height: $height - 1rem;
+        width: $height - 1rem;
+        border: 0.0625rem solid colors.$highlight;
+    }
+
+    // Little check pip inside
+    &__check::before {
+        @include common.box;
+
+        display: none;
+
+        content: " ";
+        position: relative;
+        top: 0.25rem;
+        left: 0.25rem;
+        height: $height - 1.62rem;
+        width: $height - 1.62rem;
+
+        background-color: colors.$highlight;
+    }
+
+    // Checkbox body
+    &__label {
+        @include common.box;
+
+        grid-area: label;
+
+        font-family: "Euro Caps";
+        font-size: common.$main-font-size;
+        color: colors.$highlight;
+
+        &::selection {
+            display: none;
+        }
+    }
+
+    // STATES
+    &:hover {
+        background-color: colors.$highlight;
+
+        #{$block}__check {
+            border-color: colors.$darkback;
+        }
+
+        #{$block}__check::before {
+            background-color: colors.$darkback;
+        }
+
+        #{$block}__label {
+            color: colors.$darkback;
+        }
+    }
+
+    &:active {
+        background-color: colors.$white;
+
+        #{$block}__check {
+            border-color: colors.$darkback;
+        }
+
+        #{$block}__check::before {
+            background-color: colors.$darkback;
+        }
+
+        #{$block}__label {
+            color: colors.$darkback;
+        }
+    }
+
+    // OVERRIDE ELEMENTS
+    input[type="checkbox"],
+    input[type="radio"] {
+        display: none;
+    }
+
+    input[type="checkbox"]:checked ~ #{$block}__check::before,
+    input[type="radio"]:checked ~ #{$block}__check::before {
+        display: block;
+    }
+}
