@@ -1,0 +1,19 @@
+/// BUTTON LIST
+/// A listing of button blocks.
+
+@use '../common';
+
+.ed-button-list {
+    @include common.box;
+
+    display: grid;
+    grid-auto-flow: row;
+    gap: 0.5rem;
+
+    // MODIFIERS
+    // Change the direction of the list to horizontal.
+    &--is-horizontal {
+        grid-auto-columns: 1fr;
+        grid-auto-flow: column;
+    }
+}
