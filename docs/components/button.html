@@ -55,20 +55,42 @@
                     inner element envelops the main corpus of the button, and
                     the main element holds the most prominent content.
                 </p>
+                <p class="doc-p">
+                    The HTML element for a button block can be either a button
+                    (<span class="doc-class-name">button</span>) or an anchor
+                    (<span class="doc-class-name">a</span>);
+                </p>
                 <div class="doc-example">
                     <div>
-                        <button class="ed-button">
-                            <div class="ed-button__inner">
-                                <div class="ed-button__main">Exit</div>
-                            </div>
-                        </button>
+                        <div style="margin-bottom: 0.5rem">
+                            <button class="ed-button">
+                                <div class="ed-button__inner">
+                                    <div class="ed-button__main">Exit</div>
+                                </div>
+                            </button>
+                        </div>
+
+                        <div style="margin-bottom: 0.5rem">
+                            <a href="#" class="ed-button">
+                                <div class="ed-button__inner">
+                                    <div class="ed-button__main">Exit</div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
 
-                    <pre><code class="language-html">&lt;button class="ed-button"&gt;
+                    <div>
+                        <pre><code class="language-html">&lt;button class="ed-button"&gt;
     &lt;div class="ed-button__inner"&gt;
         &lt;div class="ed-button__main"&gt;Exit&lt;/div&gt;
     &lt;/div&gt;
 &lt;/button&gt;</code></pre>
+                        <pre><code class="language-html">&lt;a href="#" class="ed-button"&gt;
+    &lt;div class="ed-button__inner"&gt;
+        &lt;div class="ed-button__main"&gt;Exit&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/a&gt;</code></pre>
+                    </div>
                 </div>
             </section>
 
