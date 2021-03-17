@@ -40,7 +40,14 @@ $ sass src/scss/elite.scss dist/css/elite.min.css --style compressed
 
 MIT
 
+## Copyright
+
+I am not affiliated with Frontier Developments. This is a personal project.
+
+Elite © 1984 David Braben & Ian Bell. Frontier © 1993 David Braben, Frontier: First Encounters © 1995 David Braben and Elite Dangerous © 1984 - 2021 Frontier Developments Plc. All rights reserved. 'Elite', the Elite logo, the Elite Dangerous logo, 'Frontier' and the Frontier logo are registered trademarks of Frontier Developments plc. Elite Dangerous: Odyssey and Elite Dangerous: Horizons are trademarks of Frontier Developments plc. All rights reserved. ‘PlayStation Family’, ‘PlayStation’, and ‘PS4’ are registered trademarks or trademarks of Sony Interactive Entertainment Inc. All other trademarks and copyright are acknowledged as the property of their respective owners.
+
 ## Commander
+
 ![CMDR Nine Oh Three](docs/img/cmdr903.png)
 
 See you out there in the black, commanders. `o7`
