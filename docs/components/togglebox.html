@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Togglebox Component - Elite.css Docs</title>
+
+        <link rel="stylesheet" href="../css/elite.min.css" />
+        <link rel="stylesheet" href="../prism.css" />
+        <link rel="stylesheet" href="../style.css" />
+
+        <script defer src="../prism.js"></script>
+    </head>
+    <body>
+        <nav>
+            <p class="doc-p doc-list-header">Elements</p>
+            <ul class="doc-ul">
+                <li><a class="doc-a" href="#togglebox">Togglebox</a></li>
+                <li>
+                    <a class="doc-a" href="#radios"
+                        >Single Select Togglebox (Radio Buttons)
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="doc-section">
+                <h1 class="doc-h1 doc-title" id="checkbox">Togglebox</h1>
+                <p class="doc-p">
+                    A togglebox shows a toggleable state of an input: either on
+                    or off, true or false.
+                </p>
+                <p class="doc-p">
+                    Stylistically, Elite Dangerous makes no distinction between
+                    radio toggles and checkbox toggles, and they both use the
+                    same <span class="doc-class-name">ed-togglebox</span> block.
+                </p>
+                <p class="doc-p">
+                    The block SHOULD be a
+                    <span class="doc-tag-name">label</span> tag set with the
+                    appropriate <span class="doc-attr-name">id</span> attribute
+                    so that the whole clickable area toggles the
+                    <span class="doc-tag-name">input</span> tag inside.
+                </p>
+                <p class="doc-p">
+                    Within the block, nest the
+                    <span class="doc-tag-name">input</span> tag, with the
+                    appropriate attributes set first.
+                    <b
+                        >If the <span class="doc-tag-name">input</span> tag
+                        doesn't come first, the styled checkbox will not respond
+                        to toggles.</b
+                    >
+                </p>
+                <p class="doc-p">
+                    Use the
+                    <span class="doc-class-name">ed-togglebox__check</span>
+                    element to render the custom checkbox and the
+                    <span class="doc-class-name">ed-togglebox__label</span>
+                    element to render the accompanying label text.
+                </p>
+                <div class="doc-example">
+                    <div>
+                        <div style="margin-bottom: 0.5rem">
+                            <label class="ed-togglebox" for="chemicals">
+                                <input
+                                    type="checkbox"
+                                    name="chemicals"
+                                    id="chemicals"
+                                    value="chemicals"
+                                />
+                                <div class="ed-togglebox__check"></div>
+                                <span class="ed-togglebox__label"
+                                    >Chemicals</span
+                                >
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 0.5rem">
+                            <label class="ed-togglebox" for="legaldrugs">
+                                <input
+                                    type="checkbox"
+                                    name="legaldrugs"
+                                    id="legaldrugs"
+                                    value="legaldrugs"
+                                />
+                                <div class="ed-togglebox__check"></div>
+                                <span class="ed-togglebox__label"
+                                    >Legal Drugs</span
+                                >
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <pre><code class="language-html">&lt;label class="ed-togglebox" for="chemicals"&gt;
+    &lt;input type="checkbox" name="chemicals" id="chemicals" value="chemicals" /&gt;
+    &lt;div class="ed-togglebox__check"&gt;&lt;/div&gt;
+    &lt;span class="ed-togglebox__label"&gt;Chemicals&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                        <pre><code class="language-html">&lt;label class="ed-togglebox" for="legaldrugs"&gt;
+    &lt;input type="checkbox" name="legaldrugs" id="legaldrugs" value="legaldrugs" /&gt;
+    &lt;div class="ed-togglebox__check"&gt;&lt;/div&gt;
+    &lt;span class="ed-togglebox__label"&gt;Legal Drugs&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="doc-section">
+                <h1 class="doc-h1 doc-title" id="radios">
+                    Single Select Togglebox (Radio Buttons)
+                </h1>
+                <p class="doc-p">
+                    Creating radio buttons is done exactly the same, replacing
+                    the <span class="doc-tag-name">input</span>
+                    <span class="doc-attr-name">type</span> attribute with
+                    "radio", and setting the
+                    <span class="doc-attr-name">name</span> attributes of all
+                    related radio buttons to the same value so they share state.
+                </p>
+                <div class="doc-example">
+                    <div>
+                        <div style="margin-bottom: 0.5rem">
+                            <label class="ed-togglebox" for="galaxy">
+                                <input
+                                    type="radio"
+                                    name="market-scope"
+                                    id="galaxy"
+                                    value="galaxy"
+                                    checked="checked"
+                                />
+                                <div class="ed-togglebox__check"></div>
+                                <span class="ed-togglebox__label"
+                                    >Show Galactic Average</span
+                                >
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 0.5rem">
+                            <label class="ed-togglebox" for="search">
+                                <input
+                                    type="radio"
+                                    name="market-scope"
+                                    id="search"
+                                    value="search"
+                                />
+                                <div class="ed-togglebox__check"></div>
+                                <span class="ed-togglebox__label"
+                                    >Search Market</span
+                                >
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 0.5rem">
+                            <label class="ed-togglebox" for="suggest">
+                                <input
+                                    type="radio"
+                                    name="market-scope"
+                                    id="suggest"
+                                    value="suggest"
+                                />
+                                <div class="ed-togglebox__check"></div>
+                                <span class="ed-togglebox__label"
+                                    >Suggest Markets</span
+                                >
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <pre><code class="language-html">&lt;label class="ed-togglebox" for="galaxy"&gt;
+    &lt;input type="radio" name="market-scope" id="galaxy" value="galaxy" checked /&gt;
+    &lt;div class="ed-togglebox__check"&gt;&lt;/div&gt;
+    &lt;span class="ed-togglebox__label"&gt;Show Galactic Average&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                        <pre><code class="language-html">&lt;label class="ed-togglebox" for="search"&gt;
+    &lt;input type="radio" name="market-scope" id="search" value="search" /&gt;
+    &lt;div class="ed-togglebox__check"&gt;&lt;/div&gt;
+    &lt;span class="ed-togglebox__label"&gt;Search Markets&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                        <pre><code class="language-html">&lt;label class="ed-togglebox" for="suggest"&gt;
+    &lt;input type="radio" name="market-scope" id="suggest" value="suggest" /&gt;
+    &lt;div class="ed-togglebox__check"&gt;&lt;/div&gt;
+    &lt;span class="ed-togglebox__label"&gt;Suggest Markets&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

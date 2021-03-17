@@ -103,6 +103,13 @@ pre[class*="language-"] {
     color: #a6e22e;
 }
 
+.doc-tag-name {
+    display: inline-block;
+
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    color: #f92672;
+}
+
 .doc-list-header {
     margin: 1rem 0;
 
