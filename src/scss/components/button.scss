@@ -50,6 +50,19 @@ $image-size: 1.6875rem;
 
         height: 100%;
         padding: $padding;
+
+        // Flip the main and sub texts within the button
+        &--flipped {
+            #{$block}__main {
+                font-size: common.$sub-font-size;
+                font-family: "Sintony";
+            }
+
+            #{$block}__sub {
+                font-size: common.$main-font-size - 0.2rem;
+                font-family: "Euro Caps";
+            }
+        }
     }
 
     // The button's most prominent content.
@@ -184,7 +197,7 @@ $image-size: 1.6875rem;
 
     // MODIFIERS
     // Modifies the button so it can support a square-sized decoration head.
-    &--has-head {
+    &--headed {
         grid-template-columns: common.$std-button-height 1fr;
 
         &:hover,
@@ -197,7 +210,7 @@ $image-size: 1.6875rem;
     }
 
     // Modifies the button so it visually shows as unable to be clicked.
-    &--is-disabled {
+    &--disabled {
         background-color: colors.$darkdisabled;
         color: colors.$disabled;
 
@@ -268,7 +281,7 @@ $image-size: 1.6875rem;
     }
 
     // Modifies the button so it is stacked instead.
-    &--is-stacked {
+    &--stacked {
         grid-template-columns: 1fr;
         grid-template-rows: 4rem 3rem;
         grid-template-areas: "icon" "body";

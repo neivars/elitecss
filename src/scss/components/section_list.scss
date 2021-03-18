@@ -25,7 +25,7 @@
     // MODIFIERS
     // A main section list has added flair to make it pop out as a main section
     // of the UI
-    &--is-main {
+    &--main {
         border-top: 0.125rem solid colors.$lowlight;
         border-bottom: 0.125rem solid colors.$lowlight;
         background-color: colors.$sectionlist;

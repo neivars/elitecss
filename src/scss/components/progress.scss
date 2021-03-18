@@ -43,7 +43,7 @@
     // MODIFIERS
     // Modifies the progress so it visually shows as stopped or forbidden in
     // some way.
-    &--is-disabled {
+    &--disabled {
         @include progress-bar(colors.$mediumdisabled, colors.$disabled);
     }
 }
