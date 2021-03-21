@@ -1,0 +1,138 @@
+/// SELECT
+/// The select component shows the selected option out of a possible range of
+/// values. Interacting with the select opens a picklist of possible choices.
+
+@use '../common';
+@use '../colors';
+
+.ed-select {
+    @include common.box;
+
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+
+    position: relative;
+    background-color: colors.$darkback;
+
+    font-family: "Euro Caps";
+    font-size: common.$main-font-size;
+    color: colors.$highlight;
+
+    // Little arrow caret indicating dropdown
+    &::after {
+        content: " ";
+        pointer-events: none;
+
+        grid-area: select;
+        position: absolute;
+        right: 0.5rem;
+
+        height: common.$main-font-size - 0.6rem;
+        width: common.$main-font-size - 0.8rem;
+
+        background-color: colors.$highlight;
+        clip-path: polygon(
+            30% 0,
+            30% 50%,
+            0 50%,
+            50% 100%,
+            100% 50%,
+            70% 50%,
+            70% 0
+        );
+    }
+
+    // ELEMENTS
+    // JS-triggered dropdown element
+    &__dropdown {
+        @include common.box;
+
+        position: absolute;
+        top: common.$main-font-size + 0.3rem;
+        width: 100%;
+        background-color: colors.$darkback;
+    }
+
+    // JS-triggered options within the dropdown
+    &__option {
+        @include common.box;
+
+        padding: 0 0.5rem;
+
+        color: colors.$highlight;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: colors.$highlight;
+            color: colors.$darkback;
+        }
+    }
+
+    // STATES
+    &:hover {
+        background-color: colors.$highlight;
+        color: colors.$darkback;
+
+        &::after {
+            background-color: colors.$darkback;
+        }
+    }
+
+    // ELEMENT OVERRIDES
+    & select {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+
+        grid-area: select;
+
+        border: 0;
+        outline: none;
+        background-color: inherit;
+        padding: 0 0.5rem;
+
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+
+        cursor: pointer;
+
+        &:disabled {
+            opacity: 1;
+        }
+
+        &::-ms-expand {
+            display: none;
+        }
+
+        option {
+            border: 0;
+            outline: none;
+            background-color: colors.$darkback;
+
+            color: colors.$highlight;
+        }
+    }
+
+    // MODIFIERS
+    // Show a disabled select
+    &--disabled {
+        background-color: colors.$darkdisabled;
+        color: colors.$disabled;
+
+        &::after {
+            background-color: colors.$disabled;
+        }
+
+        &:hover {
+            background-color: colors.$disabled;
+            color: colors.$darkdisabled;
+
+            &::after {
+                background-color: colors.$darkdisabled;
+            }
+        }
+    }
+}

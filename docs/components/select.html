@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Select Component - Elite.css Docs</title>
+
+        <link rel="stylesheet" href="../css/elite.min.css" />
+        <link rel="stylesheet" href="../prism.css" />
+        <link rel="stylesheet" href="../style.css" />
+
+        <script defer src="../prism.js"></script>
+    </head>
+    <body>
+        <nav>
+            <p class="doc-p doc-list-header">Elements</p>
+            <ul class="doc-ul">
+                <li><a class="doc-a" href="#select">Select</a></li>
+            </ul>
+
+            <p class="doc-p doc-list-header">Modifiers</p>
+            <ul class="doc-ul">
+                <li>
+                    <a class="doc-a" href="#disabled-select">Disabled Select</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="doc-section">
+                <h1 class="doc-h1 doc-title" id="select">Select</h1>
+                <p class="doc-p">
+                    A select input allows the selection of an option from a
+                    dropdown list of potential choices.
+                </p>
+                <p class="doc-p">
+                    Selects are notoriously hard to style using pure CSS: it is
+                    impossible to target the dropdown portion of the select,
+                    resulting in a slightly unfaithful deviation from the game's
+                    UI. Styling the
+                    <span class="doc-tag-name">select</span> itself becomes hard
+                    to do without a wrapping
+                    <span class="doc-tag-name">div</span> around it, which
+                    unfortunately add a little bit of HTML cruft.
+                </p>
+                <p class="doc-p">
+                    Use a <span class="doc-class-name">ed-select</span> block
+                    around a normal
+                    <span class="doc-tag-name">select</span> configured with its
+                    options.
+                </p>
+                <div class="doc-example">
+                    <div>
+                        <div class="ed-select">
+                            <select name="filter_rewards">
+                                <option value="creds">Credits</option>
+                                <option value="mats">Materials</option>
+                                <option value="comm">Commodities</option>
+                                <option value="rep">Reputation</option>
+                                <option value="inf">Influence</option>
+                                <option value="all" selected>
+                                    All Choices
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <pre><code class="language-html">&lt;div class="ed-select"&gt;
+    &lt;select name="filter_rewards"&gt;
+        &lt;option value="creds"&gt;Credits&lt;/option&gt;
+        &lt;option value="mats"&gt;Materials&lt;/option&gt;
+        &lt;option value="comm"&gt;Commodities&lt;/option&gt;
+        &lt;option value="rep"&gt;Reputation&lt;/option&gt;
+        &lt;option value="inf"&gt;Influence&lt;/option&gt;
+        &lt;option value="all" selected&gt;All Choices&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </section>
+
+            <section class="doc-section">
+                <h1 class="doc-h1 doc-title" id="disabled-select">
+                    Disabled Select
+                </h1>
+                <p class="doc-p">
+                    The
+                    <span class="doc-class-name">ed-select--disabled</span>
+                    modifier can be used to show a disabled select.
+                </p>
+                <p class="doc-p">
+                    It's good practice to also set the
+                    <span class="doc-attr-name">disabled</span> attribute of the
+                    <span class="doc-tag-name">select</span>.
+                </p>
+                <div class="doc-example">
+                    <div>
+                        <div class="ed-select ed-select--disabled">
+                            <select name="filter_rewards" disabled>
+                                <option value="creds">Credits</option>
+                                <option value="mats">Materials</option>
+                                <option value="comm">Commodities</option>
+                                <option value="rep">Reputation</option>
+                                <option value="inf">Influence</option>
+                                <option value="all" selected>
+                                    All Choices
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <pre><code class="language-html">&lt;div class="ed-select ed-select--disabled"&gt;
+    &lt;select name="filter_rewards" disabled&gt;
+        &lt;option value="creds"&gt;Credits&lt;/option&gt;
+        &lt;option value="mats"&gt;Materials&lt;/option&gt;
+        &lt;option value="comm"&gt;Commodities&lt;/option&gt;
+        &lt;option value="rep"&gt;Reputation&lt;/option&gt;
+        &lt;option value="inf"&gt;Influence&lt;/option&gt;
+        &lt;option value="all" selected&gt;All Choices&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </section>
+
+            <section class="doc-section">
+                <h1 class="doc-h1 doc-title" id="js-select">
+                    JavaScript Select
+                </h1>
+                <p class="doc-p">
+                    To style a faithful recreation of the game's UI with the
+                    select, we need to introduce some JavaScript.
+                </p>
+                <div class="doc-example">
+                    <div>
+                        <div class="ed-select example-js-ed-select">
+                            <select name="filter_rewards">
+                                <option value="creds">Credits</option>
+                                <option value="mats">Materials</option>
+                                <option value="comm">Commodities</option>
+                                <option value="rep">Reputation</option>
+                                <option value="inf">Influence</option>
+                                <option value="all" selected>
+                                    All Choices
+                                </option>
+                            </select>
+                        </div>
+                        <script>
+                            // Grab all the select blocks
+                            const selectsDiv = document.querySelectorAll(
+                                ".example-js-ed-select"
+                            );
+
+                            for (const selectDiv of selectsDiv.values()) {
+                                // Create the dropdown element
+                                const dropDown = document.createElement("div");
+                                dropDown.classList.add("ed-select__dropdown");
+                                dropDown.style.display = "none";
+
+                                const select = selectDiv.querySelector(
+                                    "select"
+                                );
+                                const options = select.querySelectorAll(
+                                    "option"
+                                );
+
+                                for (const option of options.values()) {
+                                    // Create option elements
+                                    const dropDownOption = document.createElement(
+                                        "div"
+                                    );
+                                    dropDownOption.classList.add(
+                                        "ed-select__option"
+                                    );
+                                    dropDownOption.innerText = option.innerText.trim();
+                                    dropDownOption.dataset["optionValue"] =
+                                        option.value;
+
+                                    // When selected, set the select's value
+                                    dropDownOption.addEventListener(
+                                        "mousedown",
+                                        (e) => {
+                                            const targetValue =
+                                                e.target.dataset["optionValue"];
+
+                                            const option = Array.from(
+                                                options
+                                            ).find(
+                                                (opt) =>
+                                                    opt.value === targetValue
+                                            );
+                                            option.selected = true;
+                                            dropDown.style.display = "none";
+                                        }
+                                    );
+
+                                    dropDown.append(dropDownOption);
+                                }
+
+                                // Show dropdown
+                                selectDiv.addEventListener("click", () => {
+                                    if (!select.disabled) {
+                                        dropDown.style.display = "block";
+                                    }
+                                });
+
+                                // Hide dropdown when unfocused
+                                window.addEventListener(
+                                    "click",
+                                    (e) => {
+                                        dropDown.style.display = "none";
+                                    },
+                                    true
+                                );
+
+                                // Disable select's native dropdown
+                                select.addEventListener("mousedown", (e) => {
+                                    e.preventDefault();
+                                    this.blur();
+                                    window.focus();
+                                });
+
+                                selectDiv.append(dropDown);
+                            }
+                        </script>
+                    </div>
+                    <div>
+                        <pre><code class="language-html">&lt;div class="ed-select"&gt;
+    &lt;select name="filter_rewards"&gt;
+        &lt;option value="creds"&gt;Credits&lt;/option&gt;
+        &lt;option value="mats"&gt;Materials&lt;/option&gt;
+        &lt;option value="comm"&gt;Commodities&lt;/option&gt;
+        &lt;option value="rep"&gt;Reputation&lt;/option&gt;
+        &lt;option value="inf"&gt;Influence&lt;/option&gt;
+        &lt;option value="all" selected&gt;All Choices&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+                        <pre><code class="language-html language-js">&lt;script&gt;
+    // Grab all the select blocks
+    const selectsDiv = document.querySelectorAll(".ed-select");
+
+    for (const selectDiv of selectsDiv.values()) {
+        // Create the dropdown element
+        const dropDown = document.createElement("div");
+        dropDown.classList.add("ed-select__dropdown");
+        dropDown.style.display = "none";
+
+        const select = selectDiv.querySelector( "select" );
+        const options = select.querySelectorAll( "option" );
+
+        for (const option of options.values()) {
+            // Create option elements
+            const dropDownOption = document.createElement( "div" );
+            dropDownOption.classList.add( "ed-select__option" );
+            dropDownOption.innerText = option.innerText.trim();
+            dropDownOption.dataset["optionValue"] = option.value;
+
+            // When selected, set the select's value
+            dropDownOption.addEventListener( "mousedown", (e) =&gt; {
+                const targetValue = e.target.dataset["optionValue"];
+
+                const option = Array.from( options ).find(
+                    (opt) =&gt;
+                        opt.value === targetValue
+                );
+                option.selected = true;
+                dropDown.style.display = "none";
+            });
+
+            dropDown.append(dropDownOption);
+        }
+
+        // Show dropdown
+        selectDiv.addEventListener("click", () =&gt; {
+            if (!select.disabled) {
+                dropDown.style.display = "block";
+            }
+        });
+
+        // Hide dropdown when unfocused
+        window.addEventListener("click", (e) =&gt; {
+            dropDown.style.display = "none";
+        }, true);
+
+        // Disable select's native dropdown
+        select.addEventListener("mousedown", (e) =&gt; {
+            e.preventDefault();
+            this.blur();
+            window.focus();
+        });
+
+        selectDiv.append(dropDown);
+    }
+&lt;/script&gt;</code></pre>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
