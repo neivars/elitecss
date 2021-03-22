@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Key Value Pair Component - Elite.css Docs</title>
+
+        <link rel="stylesheet" href="../css/elite.min.css" />
+        <link rel="stylesheet" href="../prism.css" />
+        <link rel="stylesheet" href="../style.css" />
+
+        <script defer src="../prism.js"></script>
+    </head>
+    <body>
+        <nav>
+            <p class="doc-p doc-list-header">Elements</p>
+            <ul class="doc-ul">
+                <li><a class="doc-a" href="#kv-pair">Key Value Pairs</a></li>
+            </ul>
+
+            <p class="doc-p doc-list-header">Modifiers</p>
+            <ul class="doc-ul">
+                <li>
+                    <a class="doc-a" href="#tight-kv-pair"
+                        >Tight Key Value Pairs</a
+                    >
+                </li>
+                <li>
+                    <a class="doc-a" href="#center-kv-pair"
+                        >Centered Key Value Pairs</a
+                    >
+                </li>
+                <li>
+                    <a class="doc-a" href="#tall-kv-pair"
+                        >Vertically Spread Key Value Pairs</a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="doc-section">
+                <h1 class="doc-h1 doc-title" id="kv-pair">Key Value Pairs</h1>
+                <p class="doc-p">
+                    Key value pairs display a two column layout of labels and
+                    their values, one per row.
+                </p>
+                <p class="doc-p">
+                    Within a
+                    <span class="doc-class-name">ed-keyvalue</span> block, nest
+                    <span class="doc-class-name">ed-keyvalue__key</span> and
+                    <span class="doc-class-name">ed-keyvalue__value</span>
+                    elements to define the key value pairs.
+                </p>
+                <p class="doc-p">
+                    Keys are presented on the left-hand and values are presented
+                    on the right-hand column in the sequential order they are
+                    nested in. They can be inserted alternating, or grouped as
+                    keys or values.
+                </p>
+                <p class="doc-p">
+                    The most semantic elements for this kind of structure are
+                    description lists, terms and details (<span
+                        class="doc-tag-name"
+                        >dl</span
+                    >, <span class="doc-tag-name">dt</span>, and
+                    <span class="doc-tag-name">dd</span>), but generic
+                    <span class="doc-tag-name">div</span> tags will work just as
+                    well.
+                </p>
+                <div class="doc-example">
+                    <div>
+                        <dl class="ed-keyvalue">
+                            <dt class="ed-keyvalue__key">Faction State</dt>
+                            <dd class="ed-keyvalue__value">Expansion</dd>
+
+                            <dt class="ed-keyvalue__key">System Influence</dt>
+                            <dd class="ed-keyvalue__value">
+                                <progress
+                                    class="ed-progress"
+                                    value="55"
+                                    max="100"
+                                ></progress>
+                            </dd>
+
+                            <dt class="ed-keyvalue__key">My Reputation</dt>
+                            <dd class="ed-keyvalue__value">Neutral</dd>
+                        </dl>
+                    </div>
+                    <pre><code class="language-html">&lt;dl class="ed-keyvalue"&gt;
+    &lt;dt class="ed-keyvalue__key"&gt;Faction State&lt;/dt&gt;
+    &lt;dd class="ed-keyvalue__value"&gt;Expansion&lt;/dd&gt;
+
+    &lt;dt class="ed-keyvalue__key"&gt;System Influence&lt;/dt&gt;
+    &lt;dd class="ed-keyvalue__value"&gt;
+        &lt;progress class="ed-progress" value="55" max="100"&gt;&lt;/progress&gt;
+    &lt;/dd&gt;
+
+    &lt;dt class="ed-keyvalue__key"&gt;My Reputation&lt;/dt&gt;
+    &lt;dd class="ed-keyvalue__value"&gt;Neutral&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                </div>
+            </section>
+
+            <section class="doc-section">
+                <h1 class="doc-h1 doc-title" id="tight-kv-pair">
+                    Tight Key Value Pairs
+                </h1>
+                <p class="doc-p">
+                    Modify the block with
+                    <span class="doc-class-name">ed-keyvalue--tight</span> to
+                    tighten the key column to be only as wide as it needs to be,
+                    allowing the rest of the width to be used by the values
+                    column.
+                </p>
+                <div class="doc-example">
+                    <div>
+                        <dl class="ed-keyvalue ed-keyvalue--tight">
+                            <dt class="ed-keyvalue__key">Superpower</dt>
+                            <dd class="ed-keyvalue__value">Federation</dd>
+
+                            <dt class="ed-keyvalue__key">System Influence</dt>
+                            <dd class="ed-keyvalue__value">
+                                <progress
+                                    class="ed-progress"
+                                    value="70"
+                                    max="100"
+                                ></progress>
+                            </dd>
+
+                            <dt class="ed-keyvalue__key">Government</dt>
+                            <dd class="ed-keyvalue__value">Confederacy</dd>
+                        </dl>
+                    </div>
+                    <pre><code class="language-html">&lt;dl class="ed-keyvalue ed-keyvalue--tight"&gt;
+    &lt;dt class="ed-keyvalue__key"&gt;Superpower&lt;/dt&gt;
+    &lt;dd class="ed-keyvalue__value"&gt;Federation&lt;/dd&gt;
+
+    &lt;dt class="ed-keyvalue__key"&gt;System Influence&lt;/dt&gt;
+    &lt;dd class="ed-keyvalue__value"&gt;
+        &lt;progress class="ed-progress" value="70" max="100"&gt;&lt;/progress&gt;
+    &lt;/dd&gt;
+
+    &lt;dt class="ed-keyvalue__key"&gt;Government&lt;/dt&gt;
+    &lt;dd class="ed-keyvalue__value"&gt;Confederacy&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                </div>
+            </section>
+
+            <section class="doc-section">
+                <h1 class="doc-h1 doc-title" id="center-kv-pair">
+                    Centered Key Value Pairs
+                </h1>
+                <p class="doc-p">
+                    Modify the block with
+                    <span class="doc-class-name">ed-keyvalue--centered</span> to
+                    align the keys to the central divide between them and the
+                    values.
+                </p>
+                <div class="doc-example">
+                    <div>
+                        <dl class="ed-keyvalue ed-keyvalue--centered">
+                            <dt class="ed-keyvalue__key">Superpower</dt>
+                            <dd class="ed-keyvalue__value">Federation</dd>
+
+                            <dt class="ed-keyvalue__key">System Influence</dt>
+                            <dd class="ed-keyvalue__value">
+                                <progress
+                                    class="ed-progress"
+                                    value="70"
+                                    max="100"
+                                ></progress>
+                            </dd>
+
+                            <dt class="ed-keyvalue__key">Government</dt>
+                            <dd class="ed-keyvalue__value">Confederacy</dd>
+                        </dl>
+                    </div>
+                    <pre><code class="language-html">&lt;dl class="ed-keyvalue ed-keyvalue--centered"&gt;
+    &lt;dt class="ed-keyvalue__key"&gt;Superpower&lt;/dt&gt;
+    &lt;dd class="ed-keyvalue__value"&gt;Federation&lt;/dd&gt;
+
+    &lt;dt class="ed-keyvalue__key"&gt;System Influence&lt;/dt&gt;
+    &lt;dd class="ed-keyvalue__value"&gt;
+        &lt;progress class="ed-progress" value="70" max="100"&gt;&lt;/progress&gt;
+    &lt;/dd&gt;
+
+    &lt;dt class="ed-keyvalue__key"&gt;Government&lt;/dt&gt;
+    &lt;dd class="ed-keyvalue__value"&gt;Confederacy&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                </div>
+                <p class="doc-p">
+                    When combined with tight key value pairs, the extra
+                    left-aligned space can be reclaimed for the values column.
+                </p>
+                <div class="doc-example">
+                    <div>
+                        <dl
+                            class="ed-keyvalue ed-keyvalue--centered ed-keyvalue--tight"
+                        >
+                            <dt class="ed-keyvalue__key">Name</dt>
+                            <dd class="ed-keyvalue__value">
+                                CMDR Nine Oh Three
+                            </dd>
+
+                            <dt class="ed-keyvalue__key">Ship</dt>
+                            <dd class="ed-keyvalue__value">Type-9 Heavy</dd>
+
+                            <dt class="ed-keyvalue__key">Balance</dt>
+                            <dd class="ed-keyvalue__value">9,000,300 CR</dd>
+                        </dl>
+                    </div>
+                    <pre><code class="language-html">&lt;dl class="ed-keyvalue ed-keyvalue--centered ed-keyvalue--tight"&gt;
+    &lt;dt class="ed-keyvalue__key"&gt;Name&lt;/dt&gt;
+    &lt;dd class="ed-keyvalue__value"&gt;CMDR Nine Oh Three&lt;/dd&gt;
+
+    &lt;dt class="ed-keyvalue__key"&gt;Ship&lt;/dt&gt;
+    &lt;dd class="ed-keyvalue__value"&gt;Type-9 Heavy&lt;/dd&gt;
+
+    &lt;dt class="ed-keyvalue__key"&gt;Balance&lt;/dt&gt;
+    &lt;dd class="ed-keyvalue__value"&gt;9,000,300 CR&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                </div>
+            </section>
+
+            <section class="doc-section">
+                <h1 class="doc-h1 doc-title" id="tall-kv-pair">
+                    Vertically Spread Key Value Pairs
+                </h1>
+                <p class="doc-p">
+                    Key value pairs take up as much vertical space as they need,
+                    but can be made to spread within a taller containing parent,
+                    though the effects are more drastic the bigger the
+                    difference in heights is.
+                </p>
+                <p class="doc-p">
+                    Modify the block with
+                    <span class="doc-class-name">ed-keyvalue--stretched</span>
+                    space the key value rows vertically.
+                </p>
+                <div class="doc-example">
+                    <div style="height: 150px">
+                        <dl class="ed-keyvalue ed-keyvalue--stretched">
+                            <dt class="ed-keyvalue__key">Superpower</dt>
+                            <dd class="ed-keyvalue__value">Federation</dd>
+
+                            <dt class="ed-keyvalue__key">System Influence</dt>
+                            <dd class="ed-keyvalue__value">
+                                <progress
+                                    class="ed-progress"
+                                    value="70"
+                                    max="100"
+                                ></progress>
+                            </dd>
+
+                            <dt class="ed-keyvalue__key">Government</dt>
+                            <dd class="ed-keyvalue__value">Confederacy</dd>
+                        </dl>
+                    </div>
+                    <pre><code class="language-html">&lt;div style="height: 150px;"&gt;
+    &lt;dl class="ed-keyvalue ed-keyvalue--stretched"&gt;
+        &lt;dt class="ed-keyvalue__key"&gt;Superpower&lt;/dt&gt;
+        &lt;dd class="ed-keyvalue__value"&gt;Federation&lt;/dd&gt;
+
+        &lt;dt class="ed-keyvalue__key"&gt;System Influence&lt;/dt&gt;
+        &lt;dd class="ed-keyvalue__value"&gt;
+            &lt;progress class="ed-progress" value="70" max="100"&gt;&lt;/progress&gt;
+        &lt;/dd&gt;
+
+        &lt;dt class="ed-keyvalue__key"&gt;Government&lt;/dt&gt;
+        &lt;dd class="ed-keyvalue__value"&gt;Confederacy&lt;/dd&gt;
+    &lt;/dl&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
